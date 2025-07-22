@@ -7,6 +7,14 @@
       "protein": "25",
       "carbs": "39",
       "fat": "40"
+    },
+    {
+      "id": "59c3",
+      "itemName": "Mango",
+      "calories": "29",
+      "protein": "29",
+      "carbs": "29",
+      "fat": "29"
     }
   ]
 }
