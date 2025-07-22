@@ -4,6 +4,23 @@ export default function Home() {
            <h1 className="text-4xl font-bold mb-6 text-blue-300">
             Welcome to <span className="text-white">NeuTrackeR</span>
            </h1>
+           <div className="max-w-2xl mx-auto mb-10">
+            <div className="flex flex-col space-y-4 max-w-md mx-auto">
+                <a
+                href="/form"
+                className="bg-blue-500 hover:bg-blue-600 text-white
+                font-bold py-3 px-6 rounded-lg transition duration-300"
+                >
+                    Log Your First Meal
+                </a>
+                <a
+                href="/about"
+                className=""
+                >
+                    Learn How It Works
+                </a>
+            </div>
+           </div>
         </div>
     );
 }
