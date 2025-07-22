@@ -1,6 +1,6 @@
 const { useState, useEffect } = require("react");
 
-export default function MealForm() {
+export default function MealForm({currentNutrition, handleChange, handleSubmit}) {
 
     return (
         <div>
