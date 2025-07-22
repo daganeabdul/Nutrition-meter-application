@@ -74,7 +74,7 @@ function App() {
         currentNutrition={currentNutrition}
         handleChange={handleChange}
         handleSubmit={handleSubmit}/>
-        <MealList nutritions={nutritions}/>
+        <MealList nutritions={nutritions} setNutrition={setNutrition}/>
     </div>
   );
 }

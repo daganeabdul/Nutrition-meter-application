@@ -3,17 +3,20 @@ import MealItem from "./MealItem";
 import deleteNutrition from "../delete"
 
 function MealList ({nutritions, setNutrition}) {
-    const handleEdit = (nutritions) => {
-      const updatedName = prompt("Enter new food name:", nutritions.itemName);
+    const handleEdit = (nutrition) => {
+      const updatedName = prompt("Enter new food name:", nutrition.itemName);
         if(updatedName && updatedName !== nutritions.itemName){
-        const updatedMeal = {...nutritions, itemName: updatedName};
+        const updatedMeal = {...nutrition, itemName: updatedName};
 
-        fetch(`http://localhost:4000/nutritions/${nutritions.id}`, {
+        fetch(`http://localhost:4000/nutritions/${nutrition.id}`, {
             method: "PATCH",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(updatedMeal),
         })
-        .then((res) => res.json())
+        .then((res) => {
+        if (!res.ok) throw new Error("Failed to update");
+          return res.json()})
+
         .then((data) =>{
             const updatedList = nutritions.map((nutrition) =>
                 nutrition.id === data.id ? data : nutrition)
