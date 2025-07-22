@@ -110,6 +110,14 @@ function MealForm() {
                     />
                 </div>
 
+                {/* Third part of the form thats the Protein and Carbs */}
+
+                    <input
+                    type="number"
+                    name="fat"
+                    value={currentNutrition.fat}
+                    onChange={handleChange}
+                    />
                                 
             </form>
         </div>
