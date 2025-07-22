@@ -36,7 +36,8 @@ export default function Layout() {
             </div>
 
             <footer className="bg-gray-800 mt-auto p-8 text-center text-white">
-                <p>This is the footer</p>
+                <p>&copy; 2025 CodePros. All rights reserved.
+Crafting innovative solutions through code.</p>
             </footer>
         </div>
     )

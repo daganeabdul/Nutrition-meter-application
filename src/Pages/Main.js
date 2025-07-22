@@ -52,7 +52,7 @@ function Main() {
         fat: "",
         })
     }
-
+    
     function deleteNutrition(id) {
         fetch(`http://localhost:4000/nutritions/${id}`,{
             method: "DELETE",
@@ -76,11 +76,12 @@ function Main() {
 
   return (
     <div className="">
-        <MealForm
-        currentNutrition={currentNutrition}
-        handleChange={handleChange}
-        handleSubmit={handleSubmit}/>
-    </div>
+    <MealForm
+    currentNutrition={currentNutrition}
+    handleChange={handleChange}
+    handleSubmit={handleSubmit}
+    />
+</div>
   );
 }
 
