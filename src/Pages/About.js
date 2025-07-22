@@ -15,6 +15,18 @@ export default function About() {
                </p>
            </div>
 
+            <div className="mt-8">
+                <p className="text-blue-300 mb-6 text-lg">
+                    Ready to start your nutrition journey?
+                </p>
+                <Link
+                to="/form"
+                className="inline-block bg-blue-500 hover:bg-blue-600
+                text-white font-bold py-3 px-8 rounded-lg transition duration-300"
+                >
+                Get Started Now
+                </Link>
+            </div>
         </div>
     );
 }
