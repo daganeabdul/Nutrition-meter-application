@@ -54,7 +54,7 @@ function App() {
     }
 
     function deleteNutrition(id) {
-        fetch(`http://localhost:4000/${id}`,{
+        fetch(`http://localhost:4000/nutritions/${id}`,{
             method: "DELETE",
         })
         .then(res => {
