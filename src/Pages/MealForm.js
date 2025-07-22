@@ -52,9 +52,10 @@ function MealForm() {
         })
     }
 
+    function deleteNutrition(id) {
+        
+    }
+
     
-
-
-
     
 }
