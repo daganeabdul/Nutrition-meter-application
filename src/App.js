@@ -1,5 +1,7 @@
 import { useState,useEffect } from "react";
 import MealForm from "./Pages/MealForm";
+import MealItem from "./component/MealItem";
+import MealList from "./component/MealList";
 
 function App() {
       //Majeor form states
@@ -80,6 +82,7 @@ function App() {
         currentNutrition={currentNutrition}
         handleChange={handleChange}
         handleSubmit={handleSubmit}/>
+        <MealList nutritions={nutritions}/>
     </div>
   );
 }
