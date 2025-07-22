@@ -1,7 +1,7 @@
 import React from "react";
 
 
-function MealItem({nutritions,deleteNutrition}) {
+function MealItem({nutritions, onDelete}) {
 
 return(
     <div className="meal-item">
@@ -10,7 +10,7 @@ return(
         <p>Protein: {nutritions.protein}g</p>
         <p>Carbs: {nutritions.carbs}g</p>
         <p>Fat: {nutritions.fat}g</p>
-        
+        <button onClick={onDelete}>Delete</button>
     </div>
 )
 }
