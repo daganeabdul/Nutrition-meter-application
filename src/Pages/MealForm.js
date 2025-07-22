@@ -12,7 +12,10 @@ function MealForm() {
     })
 
     function handleChange(e) {
-        
+        setCurrentNutrition(prev => ({
+            ...prev,
+            [e.target.name]: e.target.value
+        }))
     }
 
 
