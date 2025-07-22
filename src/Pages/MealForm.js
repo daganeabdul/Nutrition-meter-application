@@ -93,8 +93,24 @@ function MealForm() {
                     />
                 </div>
 
-               
-                
+                 {/* Second part of the form thats the Protein and Carbs */}
+
+                <div>
+                    <input
+                    type="number"
+                    name="protein"
+                    value={currentNutrition.protein}
+                    onChange={handleChange}
+                    />
+                    <input
+                    type="number"
+                    name="carbs"
+                    value={currentNutrition.carbs}
+                    onChange={handleChange}
+                    />
+                </div>
+
+                                
             </form>
         </div>
     )
