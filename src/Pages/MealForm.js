@@ -53,7 +53,14 @@ function MealForm() {
     }
 
     function deleteNutrition(id) {
-        
+        fetch(`http://localhost/3000/${id}`,{
+            method: "DELETE",
+        })
+        .then(res => {
+            if(!res.ok) throw new Error("Failed to delete");
+            setNutrition(nutritions.filter(nutrition => nutrition.id !== id ))
+        })
+        .catch(error => console.error("DELETE error:", error))
     }
 
     
