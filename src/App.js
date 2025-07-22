@@ -2,6 +2,7 @@ import { useState,useEffect } from "react";
 import MealForm from "./Pages/MealForm";
 import MealItem from "./component/MealItem";
 import MealList from "./component/MealList";
+import './component/Card.css';
 
 function App() {
       //Majeor form states

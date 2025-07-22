@@ -1,6 +1,8 @@
 import React from "react";
 
+
 function MealItem({nutritions,deleteNutrition}) {
+
 return(
     <div className="meal-item">
         <h3>{nutritions.itemName}</h3>
@@ -8,7 +10,7 @@ return(
         <p>Protein: {nutritions.protein}g</p>
         <p>Carbs: {nutritions.carbs}g</p>
         <p>Fat: {nutritions.fat}g</p>
-        <button onClick={() => deleteNutrition(nutritions.id)}>Delete</button>
+        
     </div>
 )
 }
