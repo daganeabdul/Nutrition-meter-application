@@ -1,0 +1,12 @@
+{
+    "nutritions": [
+        {
+            "id": 1,
+            "itemName": "Apple",
+            "calories": 32,
+            "proteins": 40,
+            "carbs": 20,
+            "fat": 50
+        }
+    ]
+}

@@ -30,7 +30,7 @@ function MealForm() {
             fat: currentNutrition.fat,
         }
 
-        fetch('http://localhost/3000/nutriton', {
+        fetch('http://localhost:4000/nutritions', {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(newNutrition),
@@ -53,7 +53,7 @@ function MealForm() {
     }
 
     function deleteNutrition(id) {
-        fetch(`http://localhost/3000/${id}`,{
+        fetch(`http://localhost:4000/${id}`,{
             method: "DELETE",
         })
         .then(res => {
@@ -64,9 +64,34 @@ function MealForm() {
     }
 
     useEffect(() => {
-        
-    })
+        fetch('http://localhost:4000/nutritions')
+            .then(res => {
+                if(!res.ok) throw new Error("Failed to fetch");
+                return res.json();
+            })
+            .then(data => setNutrition(data))
+            .catch(error => console.error("Fetch error:", error))
+    }, []);
 
-    
-    
+    return (
+        <div>
+            <form onSubmit={handleSubmit}>
+                <div>
+                    <input
+                    type="text"
+                    name="itemName"
+                    value={currentNutrition.itemName}
+                    onChange={handleChange}                  
+                    />
+                    <input
+                    type="text"
+                    name="itemName"
+                    value={currentNutrition.itemName}
+                    onChange={handleChange}
+                    />
+                </div>
+            </form>
+        </div>
+    )
+
 }
