@@ -54,7 +54,10 @@ export default function MealForm({ currentNutrition, handleChange, handleSubmit 
                     />
                     </div>
                 </div>
+                <div>
+                <label className="block text-white mb-1 text-sm font-bold">Fat (g)</label>
                 <input
+                    className="w-full px-3 py-2 rounded bg-blue-600 text-white"
                     type="number"
                     name="fat"
                     value={currentNutrition.fat}
@@ -62,7 +65,11 @@ export default function MealForm({ currentNutrition, handleChange, handleSubmit 
                     placeholder="Fat"
                     required
                 />
-                <button>Add Item</button>
+                </div>
+                <button className="w-full bg-blue-500 hover:bg-blue-600 text-white 
+                font-bold py-2 px-4 rounded focus:outline-none  focus:ring-blue-400 transition
+                duration-150 mt-4
+                ">Add Item</button>
             </form>
         </div>
     );
