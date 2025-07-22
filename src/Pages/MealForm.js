@@ -20,7 +20,13 @@ function MealForm() {
     }
 
      function handleSubmit(e) {
-        
+        const newNutrition = [{
+            itemName: currentNutrition.itemName,
+            calories: currentNutrition.calories,
+            protein: currentNutrition.protein,
+            carbs: currentNutrition.carbs,
+            fat: currentNutrition.fat,
+        }]
     }
 
    
