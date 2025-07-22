@@ -1,28 +1,12 @@
 {
   "nutritions": [
     {
-      "id": "1",
-      "itemName": "Apple",
-      "calories": 32,
-      "protein": 40,
-      "carbs": 20,
-      "fat": 50
-    },
-    {
-      "id": "cb30",
+      "id": "4e98",
       "itemName": "Apple",
       "calories": "30",
-      "protein": "20",
-      "carbs": "30",
-      "fat": "30"
-    },
-    {
-      "id": "31bd",
-      "itemName": "Apple",
-      "calories": "39",
-      "protein": "200",
-      "carbs": "30",
-      "fat": "300"
+      "protein": "25",
+      "carbs": "39",
+      "fat": "40"
     }
   ]
 }
