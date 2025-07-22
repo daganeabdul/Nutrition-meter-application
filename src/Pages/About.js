@@ -1,11 +1,9 @@
-export default function About() {  
+import { Link } from "react-router-dom";
+
+export default function About() {
     return (
-        <div>
-            <h1>This is about us page we are dedicated to helping the needy <br />
-            We we appreciate soo much if you will be willing to join us in , <br />
-            this journey that we are about to take. Feel free to fill out our  form in <br />
-            the link below.
-            </h1>
+        <div className="max-w-3xl mx-auto px-4 py-8 text-center">
+            
         </div>
-    )
+    );
 }
