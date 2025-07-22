@@ -6,10 +6,10 @@ function App() {
     const [nutritions, setNutrition] = useState([]);
     const [currentNutrition, setCurrentNutrition] = useState({
         itemName: "",
-        calories: null,
-        protein: null,
-        carbs: null,
-        fat: null,
+        calories: "",
+        protein: "",
+        carbs: "",
+        fat: "",
     })
 
     //Function for handling the input onChange event
@@ -46,10 +46,10 @@ function App() {
 
         setCurrentNutrition({
         itemName: "",
-        calories: null,
-        protein: null,
-        carbs: null,
-        fat: null,
+        calories: "",
+        protein: "",
+        carbs: "",
+        fat: "",
         })
     }
 
