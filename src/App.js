@@ -75,8 +75,11 @@ function App() {
     }, []);
 
   return (
-    <div className="App">
-    
+    <div className="">
+        <MealForm
+        currentNutrition={currentNutrition}
+        handleChange={handleChange}
+        handleSubmit={handleSubmit}/>
     </div>
   );
 }
