@@ -3,32 +3,40 @@ import { Link, Outlet } from "react-router-dom";
 export default function Layout() {
     
     return (
-        <div>
-            <nav>
-                <Link>
+        <div className="flex flex-col min-h-screen font-mono">
+            <nav className="bg-gray-800 p-4 shadow-md">
+               <div className="container mx-auto flex justify-between items-center">
+                <Link className="text-white">
                     <i>NeuTrackeR</i>
                 </Link>
-                <ul>
+                <ul className="flex space-x-6 text-white">
                     <li>
-                        <Link to="/">HOME</Link>
+                        <Link to="/" className="">
+                        HOME
+                        </Link>
                     </li>
                     <li>
-                        <Link to="/form">FORM</Link>
+                        <Link to="/form" className="">
+                        FORM
+                        </Link>
                     </li>
                     <li>
-                        <Link to="/about">ABOUT</Link>
+                        <Link to="/about" className="">
+                        ABOUT
+                        </Link>
                     </li>
                 </ul>
+                </div>
             </nav>
 
-            <div>
-                <main>
+            <div className="">
+                <main className="bg-blue-800 text-center max-w-[1200px] mx-auto mt-[30px] p-8 overflow-auto">
                     <Outlet />
                 </main>
             </div>
 
-            <footer>
-                
+            <footer className="bg-gray-800 mt-auto p-8 text-center text-white">
+                <p>This is the footer</p>
             </footer>
         </div>
     )
