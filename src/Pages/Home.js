@@ -15,7 +15,8 @@ export default function Home() {
                 </a>
                 <a
                 href="/about"
-                className=""
+                className="border border-blue-400 text-blue-300 hover:bg-blue-900/50
+                font-medium py-3 px-6 rounded-lg transition duration-300"
                 >
                     Learn How It Works
                 </a>
