@@ -1,4 +1,4 @@
-const { useState } = require("react");
+const { useState, useEffect } = require("react");
 
 function MealForm() {
     //Majeor form states
@@ -62,6 +62,10 @@ function MealForm() {
         })
         .catch(error => console.error("DELETE error:", error))
     }
+
+    useEffect(() => {
+        
+    })
 
     
     
