@@ -11,7 +11,9 @@ export default function MealForm({currentNutrition, handleChange, handleSubmit})
                     type="text"
                     name="itemName"
                     value={currentNutrition.itemName}
-                    onChange={handleChange}                  
+                    onChange={handleChange}
+                    placeholder="Item Name"  
+                    required                
                     />
 
                     <input
@@ -19,6 +21,8 @@ export default function MealForm({currentNutrition, handleChange, handleSubmit})
                     name="calories"
                     value={currentNutrition.calories}
                     onChange={handleChange}
+                    placeholder="Calories"
+                    required
                     />
                 </div>
 
@@ -30,12 +34,16 @@ export default function MealForm({currentNutrition, handleChange, handleSubmit})
                     name="protein"
                     value={currentNutrition.protein}
                     onChange={handleChange}
+                    placeholder="Protein"
+                    required
                     />
                     <input
                     type="number"
                     name="carbs"
                     value={currentNutrition.carbs}
                     onChange={handleChange}
+                    placeholder="Carbs"
+                    required
                     />
                 </div>
 
@@ -46,6 +54,8 @@ export default function MealForm({currentNutrition, handleChange, handleSubmit})
                     name="fat"
                     value={currentNutrition.fat}
                     onChange={handleChange}
+                    placeholder="Fat"
+                    required
                     />
 
                     <button>Add Item</button>
