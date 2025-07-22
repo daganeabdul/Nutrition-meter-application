@@ -27,6 +27,16 @@ function MealForm() {
             carbs: currentNutrition.carbs,
             fat: currentNutrition.fat,
         }]
+
+        setNutrition(nutrition, newNutrition)
+
+        setCurrentNutrition({
+        itemName: "",
+        calories: null,
+        protein: null,
+        carbs: null,
+        fat: null,
+        })
     }
 
    
