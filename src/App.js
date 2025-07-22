@@ -79,7 +79,7 @@ function App() {
   );
 }
 
-export const deleteNutrition = (id , nutritions , setNutrition)=> {
+function deleteNutrition (id , nutritions , setNutrition) {
         fetch(`http://localhost:4000/nutritions/${id}`,{
             method: "DELETE",
         })

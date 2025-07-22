@@ -10,19 +10,11 @@
     },
     {
       "id": "59c3",
-      "itemName": "Mango",
+      "itemName": "Orange",
       "calories": "29",
       "protein": "29",
       "carbs": "29",
       "fat": "29"
-    },
-    {
-      "id": "f878",
-      "itemName": "ovacado",
-      "calories": "14",
-      "protein": "120",
-      "carbs": "43",
-      "fat": "26"
     }
   ]
 }
