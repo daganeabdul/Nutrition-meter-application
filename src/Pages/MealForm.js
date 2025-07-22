@@ -11,12 +11,15 @@ function MealForm() {
         fat: null,
     })
 
+    //Function for handling the input onChange event
     function handleChange(e) {
         setCurrentNutrition(prev => ({
             ...prev,
             [e.target.name]: e.target.value
         }))
     }
+
+   
 
 
 
