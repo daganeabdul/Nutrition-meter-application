@@ -2,7 +2,7 @@ const { useState } = require("react");
 
 function MealForm() {
     //Majeor form states
-    const [nutrition, setNutrition] = useState([]);
+    const [nutritions, setNutrition] = useState([]);
     const [currentNutrition, setCurrentNutrition] = useState({
         itemName: "",
         calories: null,
@@ -20,15 +20,28 @@ function MealForm() {
     }
 
      function handleSubmit(e) {
-        const newNutrition = [{
+        e.preventDefault();
+        const newNutrition = {
+            ...currentNutrition,
             itemName: currentNutrition.itemName,
             calories: currentNutrition.calories,
             protein: currentNutrition.protein,
             carbs: currentNutrition.carbs,
             fat: currentNutrition.fat,
-        }]
+        }
 
-        setNutrition(nutrition, newNutrition)
+        fetch('http://localhost/3000/nutriton', {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(newNutrition),
+        })
+            .then(res => {
+                if(!res.ok) throw new Error("Failed to add nutrition");
+                return res.json()
+            })
+            .then(data => setNutrition([...nutritions, data]))
+            .catch(error => console.error("POST error:", error));
+
 
         setCurrentNutrition({
         itemName: "",
@@ -39,7 +52,7 @@ function MealForm() {
         })
     }
 
-   
+    
 
 
 
