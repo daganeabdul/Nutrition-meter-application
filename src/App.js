@@ -4,7 +4,7 @@ import Layout from "./Pages/Layout";
 import MealForm from "./Pages/MealForm";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
-import MealItem from "./component/MealItem";
+// import MealItem from "./component/MealItem";
 import MealList from "./component/MealList";
 import './component/Card.css';
 
@@ -18,6 +18,7 @@ export default function App() {
         carbs: "",
         fat: "",
     });
+    const [notification, setNotification] = useState(null)
 
     // Function for handling the input onChange event
     function handleChange(e) {
@@ -50,6 +51,8 @@ export default function App() {
             .then(data => setNutrition([...nutritions, data]))
             .catch(error => console.error("POST error:", error));
 
+        setNotification(newNutrition.itemName)
+
         setCurrentNutrition({
             itemName: "",
             calories: "",
@@ -58,6 +61,16 @@ export default function App() {
             fat: "",
         });
     }
+
+    useEffect(() => {
+        if(notification){
+            const timer = setTimeout(() => {
+                setNotification(null)
+            },3000)
+            return () => clearInterval(timer)
+        }
+        
+    },[notification])
 
 
     useEffect(() => {
@@ -86,6 +99,7 @@ export default function App() {
                             currentNutrition={currentNutrition}
                             handleChange={handleChange}
                             handleSubmit={handleSubmit}
+                            notification={notification}
                         />
                     }/>
                     <Route path="/list" element={<MealList
@@ -96,6 +110,7 @@ export default function App() {
                 </Route>
             </Routes>
         </BrowserRouter>
+
     );
 }
 
