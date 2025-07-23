@@ -11,9 +11,6 @@ import MealList from "./component/MealList";
 import './component/Card.css';
 
 // import Caloriesummary from "./component/Caloriesummary";
-
- import MealItem from "./component/MealItem";
-import MealList from "./component/MealList";
 import './component/Card.css';
 
 
@@ -123,14 +120,9 @@ export default function App() {
                         />}
                             />
 
-                       
-                        />
-                    }/>
-
                     <Route path="/list" element={<MealList
                             nutritions={nutritions}
                             setNutrition={setNutrition}
-                            // calorieSummary={calorieSummary}
                     />} />
                     <Route path="/about" element={<About />} />
                 </Route>
