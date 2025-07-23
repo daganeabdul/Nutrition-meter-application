@@ -1,5 +1,8 @@
 import { useState,useEffect } from "react";
 import MealForm from "./Pages/MealForm";
+import Caloriesummary from "./component/Caloriesummary";
+
+
 
 function App() {
       //Majeor form states
@@ -73,6 +76,7 @@ function App() {
             .then(data => setNutrition(data))
             .catch(error => console.error("Fetch error:", error))
     }, []);
+    
 
   return (
     <div className="">
@@ -80,6 +84,8 @@ function App() {
         currentNutrition={currentNutrition}
         handleChange={handleChange}
         handleSubmit={handleSubmit}/>
+       <Caloriesummary meals={nutritions} />
+
     </div>
   );
 }
