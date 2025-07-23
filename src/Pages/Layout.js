@@ -6,7 +6,7 @@ export default function Layout() {
         <div className="flex flex-col min-h-screen font-mono">
             <nav className="bg-gray-800 p-4 shadow-md">
                <div className="container mx-auto flex justify-between items-center">
-                <Link className="text-white">
+                <Link to="/" className="text-blue-300">
                     <i>NeuTrackeR</i>
                 </Link>
                 <ul className="flex space-x-6 text-white">
