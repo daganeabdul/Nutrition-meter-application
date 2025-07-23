@@ -39,7 +39,7 @@ export default function App() {
             fat: currentNutrition.fat,
         };
 
-        fetch('http://localhost:4000/nutritions', {
+        fetch('https://nutrition-api-nyjf.onrender.com/nutritions', {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(newNutrition),
@@ -74,7 +74,7 @@ export default function App() {
 
 
     useEffect(() => {
-        fetch('http://localhost:4000/nutritions')
+        fetch('https://nutrition-api-nyjf.onrender.com/nutritions')
             .then(res => {
                 if(!res.ok) throw new Error("Failed to fetch");
                 return res.json();

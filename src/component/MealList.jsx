@@ -8,7 +8,7 @@ function MealList ({nutritions, setNutrition}) {
         if(updatedName && updatedName !== nutritions.itemName){
         const updatedMeal = {...nutrition, itemName: updatedName};
 
-        fetch(`http://localhost:4000/nutritions/${nutrition.id}`, {
+        fetch(`https://nutrition-api-nyjf.onrender.com/nutritions/${nutrition.id}`, {
             method: "PATCH",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(updatedMeal),
