@@ -5,9 +5,17 @@ import MealForm from "./Pages/MealForm";
 
 import Home from "./Pages/Home";
 import About from "./Pages/About";
+
+// import MealItem from "./component/MealItem";
+import MealList from "./component/MealList";
+import './component/Card.css';
+
+// import Caloriesummary from "./component/Caloriesummary";
+
  import MealItem from "./component/MealItem";
 import MealList from "./component/MealList";
 import './component/Card.css';
+
 
 
 
@@ -23,6 +31,7 @@ export default function App() {
         carbs: "",
         fat: "",
     });
+    const [notification, setNotification] = useState(null)
 
     // Function for handling the input onChange event
     function handleChange(e) {
@@ -43,7 +52,7 @@ export default function App() {
             fat: currentNutrition.fat,
         };
 
-        fetch('http://localhost:4000/nutritions', {
+        fetch('https://nutrition-api-nyjf.onrender.com/nutritions', {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(newNutrition),
@@ -55,6 +64,8 @@ export default function App() {
             .then(data => setNutrition([...nutritions, data]))
             .catch(error => console.error("POST error:", error));
 
+        setNotification(newNutrition.itemName)
+
         setCurrentNutrition({
             itemName: "",
             calories: "",
@@ -64,25 +75,23 @@ export default function App() {
         });
     }
 
-    // function calorieSummary() {
-    //     const totalCalories = nutritions.reduce((sum, nutrition) => sum + Number(nutrition), 0);
-    //     const calorieLimit = 200;
-      
-    //     return (
-    //       <div className="summary">
-    //         <h2>Total Calories: {totalCalories}</h2>
-    //         {totalCalories > calorieLimit && (
-    //           <p style={{ color: "red" }}>
-    //             Warning: You've exceeded the recommended daily limit!
-    //           </p>
-    //         )}
-    //       </div> 
-    //     );
-    //   }
+
+    useEffect(() => {
+        if(notification){
+            const timer = setTimeout(() => {
+                setNotification(null)
+            },3000)
+            return () => clearInterval(timer)
+        }
+        
+    },[notification])
+
+   
+
 
 
     useEffect(() => {
-        fetch('http://localhost:4000/nutritions')
+        fetch('https://nutrition-api-nyjf.onrender.com/nutritions')
             .then(res => {
                 if(!res.ok) throw new Error("Failed to fetch");
                 return res.json();
@@ -109,9 +118,15 @@ export default function App() {
                             currentNutrition={currentNutrition}
                             handleChange={handleChange}
                             handleSubmit={handleSubmit}
-                        //    <Caloriesummary meals={nutritions} /> 
+
+                            notification={notification}
+                        />}
+                            />
+
+                       
                         />
                     }/>
+
                     <Route path="/list" element={<MealList
                             nutritions={nutritions}
                             setNutrition={setNutrition}
@@ -121,17 +136,9 @@ export default function App() {
                 </Route>
             </Routes>
         </BrowserRouter>
+
     );
 
 }
 
-//   return (
-//     <div className="">
-//         <MealForm
-//         currentNutrition={currentNutrition}
-//         handleChange={handleChange}
-//         handleSubmit={handleSubmit}/>
-//         <MealList />
-//     </div>
-//   );
-// }
+

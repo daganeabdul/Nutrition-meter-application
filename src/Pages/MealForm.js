@@ -1,4 +1,4 @@
-export default function MealForm({ currentNutrition, handleChange, handleSubmit }) {
+export default function MealForm({ currentNutrition, handleChange, handleSubmit, notification }) {
     return (
         <div className="max-w-md mx-auto bg-blue-700 rounded-lg shadow-lg">
             <form onSubmit={(e) => handleSubmit(e)} className="space-y-4">
@@ -71,6 +71,22 @@ export default function MealForm({ currentNutrition, handleChange, handleSubmit 
                 duration-150 mt-4
                 ">Add Item</button>
             </form>
+             {notification && (
+            <div className="fixed top-5 right-5 bg-blue-600 text-white px-4 py-2 rounded shadow-lg animate-slideIn">
+            Added: {notification}
+            <style jsx>{`
+                @keyframes slideIn {
+                    from{transform: translateX(100%);}
+                    to{transform: translateX(0);}
+                }
+                .animate-slideIn {
+                    animation: slideIn 0.3s ease-out forwards;
+                }
+                `}</style>
+            </div>
+        )}
         </div>
+
+       
     );
 }

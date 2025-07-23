@@ -41,12 +41,28 @@
       "fat": "56"
     },
     {
+      "id": "e740",
+      "itemName": "WaterMelon",
+      "calories": "20",
+      "protein": "39",
+      "carbs": "40",
+      "fat": "50"
+    },
+    {
+      "id": "b4a2",
+      "itemName": "Watermelon",
+      "calories": "20",
+      "protein": "15",
+      "carbs": "30",
+      "fat": "20"
+    },
+    {
       "id": "0bf4",
       "itemName": "ovacado",
       "calories": "30",
       "protein": "40",
       "carbs": "100",
       "fat": "50"
-    }
+     }
   ]
 }

@@ -1,5 +1,5 @@
 function deleteNutrition (id , nutritions , setNutrition) {
-        fetch(`http://localhost:4000/nutritions/${id}`,{
+        fetch(`https://nutrition-api-nyjf.onrender.com/nutritions/${id}`,{
             method: "DELETE",
         })
         .then(res => {
