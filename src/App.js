@@ -5,11 +5,18 @@ import MealForm from "./Pages/MealForm";
 
 import Home from "./Pages/Home";
 import About from "./Pages/About";
+
 // import MealItem from "./component/MealItem";
 import MealList from "./component/MealList";
 import './component/Card.css';
 
 // import Caloriesummary from "./component/Caloriesummary";
+
+ import MealItem from "./component/MealItem";
+import MealList from "./component/MealList";
+import './component/Card.css';
+
+
 
 
 
@@ -68,6 +75,7 @@ export default function App() {
         });
     }
 
+
     useEffect(() => {
         if(notification){
             const timer = setTimeout(() => {
@@ -77,6 +85,9 @@ export default function App() {
         }
         
     },[notification])
+
+   
+
 
 
     useEffect(() => {
@@ -107,12 +118,19 @@ export default function App() {
                             currentNutrition={currentNutrition}
                             handleChange={handleChange}
                             handleSubmit={handleSubmit}
+
                             notification={notification}
                         />}
                             />
+
+                       
+                        />
+                    }/>
+
                     <Route path="/list" element={<MealList
                             nutritions={nutritions}
                             setNutrition={setNutrition}
+                            // calorieSummary={calorieSummary}
                     />} />
                     <Route path="/about" element={<About />} />
                 </Route>
@@ -123,13 +141,4 @@ export default function App() {
 
 }
 
-//   return (
-//     <div className="">
-//         <MealForm
-//         currentNutrition={currentNutrition}
-//         handleChange={handleChange}
-//         handleSubmit={handleSubmit}/>
-//         <MealList />
-//     </div>
-//   );
-// }
+
