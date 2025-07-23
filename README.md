@@ -1,70 +1,137 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Nutrition Tracker App
 
-## Available Scripts
+A simple React-based nutrition tracker that allows users to log meals and track their calories, protein, carbs, and fat intake.
 
-In the project directory, you can run:
+Deployed JSON Server API:  
 
-### `npm start`
+     https://nutrition-api-nyjf.onrender.com/nutritions
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Add meals with nutritional info (calories, protein, carbs, fat)
+- View list of all added meals
+- Basic routing using React Router
+- JSON Server used as a mock API
+- Deployed backend on Render
 
-### `npm test`
+ Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Frontend: React (with Hooks), React Router
+- Backend/API: JSON Server
+- Deployment: Render (for the API)
 
-### `npm run build`
+Project Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+src/
+├── components/
+│   ├── Card.css
+│   ├── MealItem.js
+│   └── MealList.js
+│
+├── pages/
+│   ├── About.js
+│   ├── Home.js
+│   ├── Layout.js
+│   └── MealForm.js
+│
+├── App.css
+├── App.js
+├── index.js
+├── index.css
+├── package-lock.json
+├── package.json
+├── README.md
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Getting Started
 
-## Learn More
+1. Clone the repository
+   
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+bash
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+          git clone https://github.com/daganeabdul/nutrition-api.git
+          cd nutrition-api
 
-### Code Splitting
+2. Install dependencies
+   
+        npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. Run locally with JSON Server
 
-### Analyzing the Bundle Size
+   
+If you want to run it locally:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+    npx json-server db.json --port 3000
+    
+    npm start
 
-### Making a Progressive Web App
+Or, update your package.json like this:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+"scripts": {
+  "start": "json-server db.json --port 3000"
+}
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Then run:
 
-### Deployment
+    npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+4. App Entry Point
 
-### `npm run build` fails to minify
+       Visit http://localhost:3000 after starting the dev server.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+API Endpoint
+GET /nutritions         // Get all meals
+POST /nutritions        // Add a new meal
+
+Example of a meal object:
+
+
+{
+  "itemName": "Chicken Breast",
+  "calories": "165",
+  "protein": "31",
+  "carbs": "0",
+  "fat": "3.6"
+}
+
+ Screenshots
+
+
+![screenshot](about.png)
+
+![screenshot](home.png)
+
+![screenshot](meallist.png)
+
+![screenshot](form.png)
+
+
+ Contribution
+Contributions are welcome!
+
+ Fork the repo, make your changes, and submit a PR.
+
+📝 License
+MIT License
+
+ Author’s
+Abdulrahman Dagane
+Nate  
+Oliver  Ekeno
+
+
+
+
+
+
+
