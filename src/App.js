@@ -2,11 +2,17 @@ import { useState, useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./Pages/Layout";
 import MealForm from "./Pages/MealForm";
+
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 import MealItem from "./component/MealItem";
 import MealList from "./component/MealList";
 import './component/Card.css';
+
+import Caloriesummary from "./component/Caloriesummary";
+
+
+
 
 export default function App() {
     // Major form states
@@ -69,6 +75,8 @@ export default function App() {
             .then(data => setNutrition(data))
             .catch(error => console.error("Fetch error:", error));
     }, []);
+    
+
 
 
     return (
@@ -86,6 +94,7 @@ export default function App() {
                             currentNutrition={currentNutrition}
                             handleChange={handleChange}
                             handleSubmit={handleSubmit}
+                           <Caloriesummary meals={nutritions} /> 
                         />
                     }/>
                     <Route path="/list" element={<MealList
@@ -97,6 +106,7 @@ export default function App() {
             </Routes>
         </BrowserRouter>
     );
+
 }
 
 //   return (
