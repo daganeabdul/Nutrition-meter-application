@@ -4,6 +4,9 @@ import Layout from "./Pages/Layout";
 import MealForm from "./Pages/MealForm";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
+import MealItem from "./component/MealItem";
+import MealList from "./component/MealList";
+import './component/Card.css';
 
 export default function App() {
     // Major form states
@@ -55,17 +58,7 @@ export default function App() {
             fat: "",
         });
     }
-    
-    function deleteNutrition(id) {
-        fetch(`http://localhost:4000/nutritions/${id}`, {
-            method: "DELETE",
-        })
-        .then(res => {
-            if(!res.ok) throw new Error("Failed to delete");
-            setNutrition(nutritions.filter(nutrition => nutrition.id !== id));
-        })
-        .catch(error => console.error("DELETE error:", error));
-    }
+
 
     useEffect(() => {
         fetch('http://localhost:4000/nutritions')
@@ -77,6 +70,7 @@ export default function App() {
             .catch(error => console.error("Fetch error:", error));
     }, []);
 
+
     return (
         <BrowserRouter>
             <Routes>
@@ -84,7 +78,7 @@ export default function App() {
                     <Route index element={
                         <Home 
                             nutritions={nutritions} 
-                            deleteNutrition={deleteNutrition} 
+                            // deleteNutrition={deleteNutrition} 
                         />
                     } />
                     <Route path="/form" element={
@@ -94,9 +88,24 @@ export default function App() {
                             handleSubmit={handleSubmit}
                         />
                     }/>
+                    <Route path="/list" element={<MealList
+                            nutritions={nutritions}
+                            setNutrition={setNutrition}
+                    />} />
                     <Route path="/about" element={<About />} />
                 </Route>
             </Routes>
         </BrowserRouter>
     );
 }
+
+//   return (
+//     <div className="">
+//         <MealForm
+//         currentNutrition={currentNutrition}
+//         handleChange={handleChange}
+//         handleSubmit={handleSubmit}/>
+//         <MealList />
+//     </div>
+//   );
+// }

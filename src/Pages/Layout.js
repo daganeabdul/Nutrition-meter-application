@@ -21,6 +21,11 @@ export default function Layout() {
                         </Link>
                     </li>
                     <li>
+                        <Link to="/list">
+                        MEAL LIST
+                        </Link>
+                    </li>
+                    <li>
                         <Link to="/about" className="">
                         ABOUT
                         </Link>
