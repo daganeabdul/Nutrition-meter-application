@@ -5,11 +5,10 @@ import MealForm from "./Pages/MealForm";
 
 import Home from "./Pages/Home";
 import About from "./Pages/About";
-import MealItem from "./component/MealItem";
+ import MealItem from "./component/MealItem";
 import MealList from "./component/MealList";
 import './component/Card.css';
 
-import Caloriesummary from "./component/Caloriesummary";
 
 
 
@@ -65,6 +64,22 @@ export default function App() {
         });
     }
 
+    // function calorieSummary() {
+    //     const totalCalories = nutritions.reduce((sum, nutrition) => sum + Number(nutrition), 0);
+    //     const calorieLimit = 200;
+      
+    //     return (
+    //       <div className="summary">
+    //         <h2>Total Calories: {totalCalories}</h2>
+    //         {totalCalories > calorieLimit && (
+    //           <p style={{ color: "red" }}>
+    //             Warning: You've exceeded the recommended daily limit!
+    //           </p>
+    //         )}
+    //       </div> 
+    //     );
+    //   }
+
 
     useEffect(() => {
         fetch('http://localhost:4000/nutritions')
@@ -94,12 +109,13 @@ export default function App() {
                             currentNutrition={currentNutrition}
                             handleChange={handleChange}
                             handleSubmit={handleSubmit}
-                           <Caloriesummary meals={nutritions} /> 
+                        //    <Caloriesummary meals={nutritions} /> 
                         />
                     }/>
                     <Route path="/list" element={<MealList
                             nutritions={nutritions}
                             setNutrition={setNutrition}
+                            // calorieSummary={calorieSummary}
                     />} />
                     <Route path="/about" element={<About />} />
                 </Route>

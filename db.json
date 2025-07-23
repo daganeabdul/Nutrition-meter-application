@@ -39,6 +39,14 @@
       "protein": "56",
       "carbs": "90",
       "fat": "56"
+    },
+    {
+      "id": "0bf4",
+      "itemName": "ovacado",
+      "calories": "30",
+      "protein": "40",
+      "carbs": "100",
+      "fat": "50"
     }
   ]
 }

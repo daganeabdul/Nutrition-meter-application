@@ -64,4 +64,7 @@
   border: 1px solid #ff6b6b;
   background: #fff5f5;
 }
+.limit-exceed{
+  color: red;
+}
 /*1 rem = 16px, so 0.3rem = 4.8px*/

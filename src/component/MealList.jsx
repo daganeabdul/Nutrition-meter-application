@@ -33,7 +33,8 @@ function MealList ({nutritions, setNutrition}) {
                 key={nutrition.id}
                 nutritions={nutrition} 
                 onDelete = {() =>deleteNutrition(nutrition.id, nutritions, setNutrition)}
-                 onEdit = {() => handleEdit(nutrition)}/>
+                onEdit = {() => handleEdit(nutrition)}
+                 />
             ))}
             {nutritions.length === 0 && <p>No meals added yet.</p>}
         </div>
