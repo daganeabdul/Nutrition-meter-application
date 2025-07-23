@@ -22,7 +22,7 @@ export default function Layout() {
                     </li>
                     <li>
                         <Link to="/list">
-                        MEAL LIST
+                        MEAL-LIST
                         </Link>
                     </li>
                     <li>
