@@ -24,24 +24,24 @@ Features
 Project Structure
 
 src/
-├── components/
-│   ├── Card.css
-│   ├── MealItem.js
-│   └── MealList.js
-│
-├── pages/
-│   ├── About.js
-│   ├── Home.js
-│   ├── Layout.js
-│   └── MealForm.js
-│
-├── App.css
-├── App.js
-├── index.js
-├── index.css
-├── package-lock.json
-├── package.json
-├── README.md
+    components/
+       Card.css
+       MealItem.js
+       MealList.js
+
+pages/
+    About.js
+    Home.js
+    Layout.js
+    MealForm.js
+
+   App.css
+    App.js
+    index.js
+    index.css
+    package-lock.json
+    package.json
+ README.md
 
 
 
