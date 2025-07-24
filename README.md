@@ -7,7 +7,7 @@ Deployed JSON Server API:
 
        https://nutrition-api-nyjf.onrender.com/nutritions
 
-live Link :
+live Link  :
 
        https://nutrition-meter-application.vercel.app/
 
