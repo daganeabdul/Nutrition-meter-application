@@ -3,13 +3,14 @@ Nutrition Tracker App
 
 A simple React-based nutrition tracker that allows users to log meals and track their calories, protein, carbs, and fat intake.
 
-Deployed JSON Server API:  
+Frontend (Vercel): 
 
-       https://nutrition-api-nyjf.onrender.com/nutritions
+    https://nutrition-meter-application.vercel.app/
 
-live Link  :
 
-       https://nutrition-meter-application.vercel.app/
+Backend API (Render): 
+
+    https://nutrition-api-nyjf.onrender.com/nutritions
 
 Features
 
