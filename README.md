@@ -5,7 +5,11 @@ A simple React-based nutrition tracker that allows users to log meals and track 
 
 Deployed JSON Server API:  
 
-     https://nutrition-api-nyjf.onrender.com/nutritions
+       https://nutrition-api-nyjf.onrender.com/nutritions
+
+live Link :
+
+       https://nutrition-meter-application.vercel.app/
 
 Features
 
