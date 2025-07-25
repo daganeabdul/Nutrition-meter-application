@@ -5,12 +5,12 @@ A simple React-based nutrition tracker that allows users to log meals and track 
 
 ### Frontend (Vercel): 
 
-    https://nutrition-meter-application.vercel.app/
+   https://nutrition-meter-application.vercel.app/
 
 
 ### Backend API (Render): 
 
-    https://nutrition-api-nyjf.onrender.com/nutritions
+   https://nutrition-api-nyjf.onrender.com/nutritions
 
 ## Features
 
@@ -99,7 +99,7 @@ _pages/_
 
 4. App Entry Point
 
-   Visit (http://localhost:3000 after starting the dev server.)
+   Visit http://localhost:3000 after starting the dev server.
 
 
 
