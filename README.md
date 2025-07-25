@@ -1,18 +1,18 @@
 
-Nutrition Tracker App
+# Nutrition Tracker App
 
 A simple React-based nutrition tracker that allows users to log meals and track their calories, protein, carbs, and fat intake.
 
-Frontend (Vercel): 
+### Frontend (Vercel): 
 
     https://nutrition-meter-application.vercel.app/
 
 
-Backend API (Render): 
+### Backend API (Render): 
 
     https://nutrition-api-nyjf.onrender.com/nutritions
 
-Features
+## Features
 
 - Add meals with nutritional info (calories, protein, carbs, fat)
 - View list of all added meals
@@ -20,47 +20,47 @@ Features
 - JSON Server used as a mock API
 - Deployed backend on Render
 
- Tech Stack
+## Tech Stack
 
 - Frontend: React (with Hooks), React Router
 - Backend/API: JSON Server
 - Deployment: Render (for the API)
 
-Project Structure
+## Project Structure
 
-src/
+**src/**
 
- components/
+ _components/_
  
-  Card.css
+  - Card.css
  
-  MealItem.js
+  - MealItem.js
   
-  MealList.js
+  - MealList.js
 
-pages/
+_pages/_
 
-About.js
+- About.js
 
- Home.js
+- Home.js
     
- Layout.js
+- Layout.js
     
- MealForm.js
+- MealForm.js
 
- App.css
+- App.css
    
-   App.js
+  App.js
     
   index.js
     
   index.css
     
- package-lock.json
+- package-lock.json
     
- package.json
+- package.json
  
- README.md
+- README.md
 
 
 
@@ -68,62 +68,63 @@ About.js
 
 
 
-Getting Started
+## Getting Started
 
 1. Clone the repository
+    ```bash
+    git clone https://github.com/daganeabdul/nutrition-api.git
    
-
-bash
-
-          git clone https://github.com/daganeabdul/nutrition-api.git
-          cd nutrition-api
+    cd nutrition-api
 
 2. Install dependencies
-   
-        npm install
+    ```bash
+    npm install
 
 4. Run locally with JSON Server
-
+    ```bash
+     npx json-server db.json --port 3000
    
-If you want to run it locally:
+  If you want to run it locally:
+   
+        `npm start`
 
-    npx json-server db.json --port 3000
-    
-    npm start
+  Or, update your package.json like this:
+     `"scripts": {
+      "start": "json-server db.json --port 3000"
+       }`
 
-Or, update your package.json like this:
-
-
-"scripts": {
-  "start": "json-server db.json --port 3000"
-}
-
-Then run:
-
-    npm start
+   Then run:
+  
+    `npm start`
 
 4. App Entry Point
 
-       Visit http://localhost:3000 after starting the dev server.
+   Visit (http://localhost:3000 after starting the dev server.)
 
 
 
-API Endpoint
-GET /nutritions         // Get all meals
-POST /nutritions        // Add a new meal
+## API Endpoints
+- GET /nutritions  - // Get all meals
+- POST /nutritions - // Add a new meal
 
-Example of a meal object:
+### Example of a meal object:
 
 
 {
+
   "itemName": "Chicken Breast",
+  
   "calories": "165",
+  
   "protein": "31",
+  
   "carbs": "0",
+  
   "fat": "3.6"
+  
 }
 
- Screenshots
+## Screenshots
 
 
 ![screenshot](about.png)
@@ -135,12 +136,13 @@ Example of a meal object:
 ![screenshot](form.png)
 
 
- Contribution
+## Contribution
+
 Contributions are welcome!
 
- Fork the repo, make your changes, and submit a PR.
+ **Fork the repo, make your changes, and submit a PR.**
 
-MIT License
+## MIT License
 
 Copyright (c) 2025 daganeabdul
 
@@ -164,11 +166,11 @@ SOFTWARE.
 
  Author’s
  
-  Abdulrahman Dagane
+  **Abdulrahman Dagane**
   
-  Nate Kungu
+  **Nate Kungu**
   
-  Oliver  Ekeno
+  **Oliver  Ekeno**
 
 
 
